@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { ChatGPTRequest, ChatGPTResponse, Question, ImprovedPrompt, PromptAnalysis } from '../types';
+import type { ChatGPTRequest, ChatGPTResponse, Question, ImprovedPrompt, PromptAnalysis, PromptTechnique } from '../types';
 
 const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 const API_URL = import.meta.env.VITE_OPENAI_API_URL || 'https://api.openai.com/v1';
@@ -126,7 +126,7 @@ export const generateImprovedPrompt = async (
     '충분한 고려를 위한 지시사항 추가'
   ];
   
-  const appliedTechniques: string[] = [
+  const appliedTechniques: PromptTechnique[] = [
     '구체적 요구사항 반영',
     '논리적 구조화'
   ];
